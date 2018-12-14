@@ -1,5 +1,15 @@
-<p>DETAIL VIEW</p>
-<div>
-    <div class="swatchColor" style.background ="#{{detailColor}}"></div>
-    <a href="/{{detailColor}}">#{{detailColor}}</a>
+
+<div class="modal-body">
+  <div class="mainSwatch">
+      <div class="swatchColor" style.background ="#{{swatch}}"></div>
+      <a href="/{{swatch}}">#{{swatch}}</a>
+  </div>
+ <div class="altSwatches">
+
+
+ </div>
+
+</div>
+<div class="modal-footer" style="text-align:center">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
 </div>

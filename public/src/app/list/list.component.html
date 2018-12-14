@@ -3,13 +3,14 @@
 
     <div *ngFor= "let swatch of swatches | paginate: { itemsPerPage: 10, currentPage: p }" class="swatch">
       <div class="swatchColor" style.background ="#{{swatch}}"></div>
-      <!-- <a href="/{{swatch}}">{{swatch}}</a> -->
-      <a href="/{{swatch}}">#{{swatch}}</a>
+      <!-- <a href="/{{swatch}}">#{{swatch}}</a> -->
+      <button class="btn btn-sm btn-outline-primary" (click)="open(swatch)">#{{swatch}}</button>
+
   
     </div>
     <pagination-controls (pageChange)="p = $event"></pagination-controls>
   
     <!-- <ngb-pagination [collectionSize]="70" [(page)]="page" [directionLinks]="false"></ngb-pagination> -->
-  
+
   </div>
   

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {  NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DetailComponent } from '../detail/detail.component';
+
 // import color from 'color'; 
 // var Color = require('color');
 
@@ -12,7 +15,7 @@ export class ListComponent implements OnInit {
 
   swatches: any[];
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
     this.swatches = [];
@@ -42,6 +45,10 @@ export class ListComponent implements OnInit {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-}
+  }
+  open(swatchColor) {
+    const modalRef = this.modalService.open(DetailComponent);
+    modalRef.componentInstance.swatch = swatchColor;
+  }
 
 }

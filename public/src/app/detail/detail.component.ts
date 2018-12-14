@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-detail',
@@ -10,7 +11,8 @@ export class DetailComponent implements OnInit {
   detailColor: string;
   constructor(
       private _route: ActivatedRoute,
-      private _router: Router
+      private _router: Router,
+      public activeModal: NgbActiveModal
     ) { }
 
   ngOnInit() {
