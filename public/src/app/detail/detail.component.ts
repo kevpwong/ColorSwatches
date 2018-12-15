@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpService } from '../http.service';; 
 
 @Component({
@@ -15,18 +14,19 @@ export class DetailComponent implements OnInit {
   constructor(
       private _route: ActivatedRoute,
       private _router: Router,
-      public activeModal: NgbActiveModal,
       private _httpService: HttpService
     ) { }
 
   ngOnInit() {
-    this.altColors = this._httpService.generateAltColors(this.swatch);
+    this._route.params.subscribe((params: Params) => {
+      this.swatch = params['colorid'];
+      this.altColors = this._httpService.generateAltColors(this.swatch);
+    });
+  }
+  clear() {
+    this._router.navigateByUrl('/');
 
-    // this._route.params.subscribe((params: Params) => {
-    //   console.log(params['colorid'])
-    //   this.detailColor = params['colorid'];
-
-    // // this.altColors;
-    // });
+    // const modalRef = this.modalService.open(DetailComponent, { size: 'lg' });
+    // modalRef.componentInstance.swatch = swatchColor;
   }
 }

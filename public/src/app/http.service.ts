@@ -14,8 +14,7 @@ export class HttpService {
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
-    console.log('SERVICE RANDOM COLOR');
-    return color;
+      return color;
   }
 
   generateAltColors(swatch){
@@ -26,7 +25,7 @@ export class HttpService {
     return this.altColors;
   }
   
-  shadeColor(color, percent) {  // deprecated. See below.
+  shadeColor(color, percent) { 
     var num = parseInt(color,16),
     amt = Math.round(2.55 * percent),
     R = (num >> 16) + amt,
