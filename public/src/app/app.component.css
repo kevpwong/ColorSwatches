@@ -1,0 +1,12 @@
+.sidebar{
+    background: #D6D8D7;
+    height: 100%;
+    padding: 20px;
+}
+.sidebar button{
+    width: 100%;
+    margin: 10px 0px;
+}
+.navbar {
+    background: #363C3C;
+}

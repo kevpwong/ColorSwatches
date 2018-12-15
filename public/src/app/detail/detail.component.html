@@ -1,15 +1,16 @@
 
 <div class="modal-body">
-  <div class="mainSwatch">
-      <div class="swatchColor" style.background ="#{{swatch}}"></div>
-      <a href="/{{swatch}}">#{{swatch}}</a>
+  <div class="swatch-block swatch-block-detail-main">
+      <div class="swatch-color swatch-color-detail" style.background ="#{{swatch}}"></div>
+      <p style="display: inline">#{{swatch}}</p>
+    </div>
+  <div class="altSwatches">
+      <div *ngFor= "let swatch of altColors" class="swatch-block swatch-block-list" (click)="open(swatch)">
+          <div class="swatch-color swatch-color-list" style.background ="#{{swatch}}"></div>
+          <p style="display: inline">#{{swatch}}</p>
+      </div>
   </div>
- <div class="altSwatches">
-
-
- </div>
-
 </div>
 <div class="modal-footer" style="text-align:center">
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  <button type="button" (click)="activeModal.close('Close click')">Clear</button>
 </div>

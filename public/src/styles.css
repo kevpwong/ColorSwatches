@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.google.com/specimen/Source+Serif+Pro');
+*{
+    font-family: 'Source Serif Pro'     !important;
+}
+.modal-footer{
+    justify-content: center;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.swatch-block{
+    border-radius: 10px; 
+    text-align: left;
+    margin: 20px;
+}
+
+.swatch-block p {
+    margin: 25px 10px;
+}
+.swatch-block-list {
+    width: 250px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.swatch-block-detail-main{
+    border: 1px solid #363C3C;
+}
+
+.swatch-color{
+    border-radius: 10px 10px 0px 0px;
+    display: inline-block;
+}
+
+.swatch-color-list{
+    width: 250px;
+    height: 250px;
+}
+.swatch-color-detail{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+.swatch-block-detail-sub{
+    
+}
+
+
+
+
+button {
+    border-radius: 6px;
+}
+
+#search-bar {
+    border-radius: 6px;
+}
