@@ -1,12 +1,21 @@
-.sidebar{
+#sidebar{
     background: #D6D8D7;
-    height: 100%;
     padding: 20px;
 }
-.sidebar button{
-    width: 100%;
-    margin: 10px 0px;
+.row {
+    height: 100%;
 }
 .navbar {
     background: #363C3C;
+}
+
+#side-button-div{
+    text-align: center;
+}
+#side-button-div{
+    margin: auto;
+}
+#nav-search{
+    float: right;
+    margin-top: 10px;
 }

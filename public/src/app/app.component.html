@@ -1,27 +1,28 @@
-  <nav class="navbar navbar-fixed-top">
-      <div class="container">
-          <img src="../assets/images/logo-symbol.svg" alt="Helpful Human Logo">
-          <input id="search-bar" type="text" style="float: right" placeholder="search">
-      </div>
-  </nav>
-  <div class="row">
-    <div class="col-2">
-        <div class="sidebar">
+<nav class="navbar navbar-fixed-top">
+    <div class="justify-content-end">
+        <img src="../assets/images/logo-symbol.svg" alt="Helpful Human Logo" (click)="home()">
+        <input id="nav-search" type="text"  placeholder="search">
+    </div>
+</nav>
+<div class="row">
+  <div class="col-md-2 col-s-4" id="sidebar">
+      <div id="side-button-div">
             <button (click)="randomColor()">Random Color</button>
-            <p (click)="changeColor('orange')">Orange</p>
-            <p (click)="changeColor('yellow')">Yellow</p>
-            <p (click)="changeColor('green')">Green</p>
-            <p (click)="changeColor('blue')">Blue</p>
-            <p (click)="changeColor('purple')">Purple</p>
-            <p (click)="changeColor('brown')">Brown</p>
-            <p (click)="changeColor('gray')">Gray</p>
-          
-        </div>
-    </div>
-    <div class="col-10">
-        <router-outlet></router-outlet>
-    </div>
+      </div>
+      <ul>
+        <li>Orange</li>
+        <li>Yellow</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Purple</li>
+        <li>Brown</li>
+        <li>Gray</li>              
+      </ul>
   </div>
+  <div class="col-md-10 col-s-8">
+      <router-outlet></router-outlet>
+  </div>
+</div>
 
 
 

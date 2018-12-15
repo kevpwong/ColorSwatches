@@ -1,9 +1,9 @@
 <div class="list"> 
   <div *ngFor= "let swatch of swatches | paginate: { itemsPerPage: 12, currentPage: p }" class="swatch-block swatch-block-list" (click)="open(swatch)">
       <div class="swatch-color swatch-color-list" style.background ="#{{swatch}}"></div>
-      <p style="display: inline">#{{swatch}}</p>
+      <p>#{{swatch}}</p>
   </div>
 </div>
-<pagination-controls (pageChange)="p = $event" style="text-align: center;"></pagination-controls> 
+<pagination-controls (pageChange)="p = $event" style="text-align: center;" directionLinks="false"></pagination-controls> 
 
   

@@ -25,9 +25,6 @@ export class DetailComponent implements OnInit {
   }
   clear() {
     this._router.navigateByUrl('/');
-
-    // const modalRef = this.modalService.open(DetailComponent, { size: 'lg' });
-    // modalRef.componentInstance.swatch = swatchColor;
   }
   open(swatchColor) {
     this._router.navigateByUrl('/'+ swatchColor);
