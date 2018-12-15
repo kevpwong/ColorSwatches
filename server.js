@@ -7,7 +7,7 @@ var port = process.env.PORT || 8000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static( __dirname + '/public/dist/public/' ));
 
-app.all("*", (req,res,next) => {
+app.all("/*", (req,res,next) => {
     res.sendFile(path.join(__dirname+'/public/dist/public/index.html'));
   });
 

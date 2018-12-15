@@ -62,7 +62,7 @@ html,body {
     height: 20vh;
 }
 
-button, #search-bar  {
+button, #nav-search  {
     border-radius: 6px;
 }
 button{
