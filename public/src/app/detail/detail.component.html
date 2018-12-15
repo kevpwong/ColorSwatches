@@ -1,16 +1,17 @@
 
 <div class="modal-body">
   <div class="swatch-block swatch-block-detail-main">
-      <div class="swatch-color swatch-color-detail" style.background ="#{{swatch}}"></div>
+    <div class="swatch-color swatch-color-detail" style.background ="#{{swatch}}"></div>
+    <p style="display: inline">#{{swatch}}</p>
+  </div>
+  <div class="altSwatches">
+    <div *ngFor= "let swatch of altColors" class="swatch-block swatch-block-detail-sub" (click)="open(swatch)">
+      <div class="swatch-color swatch-color-list" style.background ="#{{swatch}}"></div>
       <p style="display: inline">#{{swatch}}</p>
     </div>
-  <div class="altSwatches">
-      <div *ngFor= "let swatch of altColors" class="swatch-block swatch-block-list" (click)="open(swatch)">
-          <div class="swatch-color swatch-color-list" style.background ="#{{swatch}}"></div>
-          <p style="display: inline">#{{swatch}}</p>
-      </div>
   </div>
 </div>
+
 <div class="modal-footer" style="text-align:center">
   <button type="button" (click)="clear()">Clear</button>
 </div>

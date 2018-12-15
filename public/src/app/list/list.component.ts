@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { DetailComponent } from '../detail/detail.component';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
-import { HttpService } from '../http.service';; 
-// import color from 'color'; 
-// var Color = require('color');
-
-
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-list',
@@ -20,10 +14,8 @@ export class ListComponent implements OnInit {
   swatches: any[];
 
   constructor(
-    // private modalService: NgbModal,
     private _httpService: HttpService,
     private _router: Router
-
   ) { }
 
   ngOnInit() {
@@ -42,11 +34,7 @@ export class ListComponent implements OnInit {
   }
 
   open(swatchColor) {
-    console.log('/'+ swatchColor);
     this._router.navigateByUrl('/'+ swatchColor);
-
-    // const modalRef = this.modalService.open(DetailComponent, { size: 'lg' });
-    // modalRef.componentInstance.swatch = swatchColor;
   }
 
 }

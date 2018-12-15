@@ -32,14 +32,14 @@ export class HttpService {
     G = (num >> 8 & 0x00FF) + amt,
     B = (num & 0x0000FF) + amt;
     return (0x1000000 + (R<255?R<1?0:R:255)*0x10000 + (G<255?G<1?0:G:255)*0x100 + (B<255?B<1?0:B:255)).toString(16).slice(1);
-}
+  }
 
-  getTasks(){
-    // Remove the lines of code where we make the variable 'tempObservable' and subscribe to it.
-    // tempObservable = this._http.get('/tasks');
-    // tempObservable.subscribe(data => console.log("Got our tasks!", data));
-    // Return the observable to wherever the getTasks method was invoked.
-    return this._http.get('/tasks');
+  getSpecificColors(color){
+    let specColors = [];
+    for (var i = 0; i < 13; i++) {
+      specColors.push(this.shadeColor(color, i * 2));
+    }
+    return specColors;
   }
 
 
