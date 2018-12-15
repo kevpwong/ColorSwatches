@@ -6,7 +6,7 @@ export class HttpService {
 
   constructor(private _http: HttpClient){}
   altColors: string[]
-  shades = [30, 20, 10, -10, -20];
+  shades = [15, 10, 5, -10, -15];
 
   get_random_color() {
     let letters = '0123456789ABCDEF';
