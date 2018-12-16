@@ -1,12 +1,11 @@
-
 {
-  "name": "ColorSwatches",
+  "name": "public",
   "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
     "ng": "ng",
+    "start": "ng serve",
     "build": "ng build",
+    "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --aot -prod"
@@ -30,9 +29,7 @@
     "ngx-pagination": "^3.2.1",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26",
-    "typescript": "~2.7.2",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "typescript": "~2.7.2"
 
   },
   "devDependencies": {
