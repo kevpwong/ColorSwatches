@@ -2,6 +2,8 @@
 
 This is an interactive color picker web application made with Angular, Express, and Node.
 
+https://color-swatches.herokuapp.com/
+
 
 ## Installing
 
