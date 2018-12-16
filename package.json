@@ -1,9 +1,9 @@
 {
-  "name": "public",
-  "version": "0.0.0",
+  "name": "colorswatches",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -29,8 +29,8 @@
     "ngx-pagination": "^3.2.1",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26",
-    "typescript": "~2.7.2"
-
+    "typescript": "~2.7.2",
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.7.0",

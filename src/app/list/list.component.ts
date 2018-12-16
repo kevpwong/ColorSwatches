@@ -8,7 +8,7 @@ import { HttpService } from '../http.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  
+
   p: number = 1;
   swatches: any[];
 
